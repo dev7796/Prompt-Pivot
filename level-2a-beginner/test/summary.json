@@ -1,0 +1,35 @@
+{
+ "model": "us.anthropic.claude-opus-5-5 (Bedrock, us-east-1)",
+ "date": "2026-10-13",
+ "dataset": "test/messages_200.json (70 BILLING / 70 BUG / 60 OTHER, seeded)",
+ "v1_naive_as_written": {
+  "n": 200,
+  "crashed_on_content0_text": 200,
+  "note": "content[0] is a ThinkingBlock on Opus 5.5; response.content[0].text raises AttributeError"
+ },
+ "v1_naive_text_only": {
+  "n": 200,
+  "exact_label": 0,
+  "one_label_word_somewhere": 131,
+  "of_which_correct": 107,
+  "no_label_word_at_all": 69
+ },
+ "v2_examples_plus_parse": {
+  "n": 200,
+  "parseable": 200,
+  "correct": 198,
+  "stop_reason_not_end_turn": 0,
+  "misses": [
+   {
+    "msg": "my invoice pdf won't download, 404",
+    "truth": "BILLING",
+    "got": "BUG"
+   },
+   {
+    "msg": "THE 'MANAGE SUBSCRIPTION' LINK IN THE EMAIL GOES TO A LOGIN LOOP (I JUST WANT TO CANCEL)",
+    "truth": "BILLING",
+    "got": "BUG"
+   }
+  ]
+ }
+}
