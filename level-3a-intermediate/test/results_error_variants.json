@@ -1,0 +1,31 @@
+{
+ "What's the weather in SF?": {
+  "trace": [
+   "[step 0] get_weather({'city': 'San Francisco'})",
+   "[step 0]   -> Error: City not found. Try the full name with region, e.g. 'San Francisco, CA'",
+   "[step 1] get_weather({'city': 'San Francisco, CA'})"
+  ],
+  "answer": "It's 15\u00b0C (about 59\u00b0F) in San Francisco right now."
+ },
+ "What's the weather in San Francisco?": {
+  "trace": [
+   "[step 0] get_weather({'city': 'San Francisco'})",
+   "[step 0]   -> Error: City not found. Try the full name with region, e.g. 'San Francisco, CA'",
+   "[step 1] get_weather({'city': 'San Francisco, CA'})"
+  ],
+  "answer": "It's currently 15\u00b0C (about 59\u00b0F) in San Francisco, CA."
+ },
+ "How warm is it in Lyon right now?": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Lyon'})",
+   "[step 0]   -> Error: City not found. Try the full name with region, e.g. 'San Francisco, CA'",
+   "[step 1] get_weather({'city': 'Lyon, France'})",
+   "[step 1]   -> Error: City not found. Try the full name with region, e.g. 'San Francisco, CA'",
+   "[step 2] get_weather({'city': 'Lyon, Auvergne-Rh\u00f4ne-Alpes, France'})",
+   "[step 2]   -> Error: City not found. Try the full name with region, e.g. 'San Francisco, CA'",
+   "[step 3] get_weather({'city': 'Lyon, FR'})",
+   "[step 3]   -> Error: City not found. Try the full name with region, e.g. 'San Francisco, CA'"
+  ],
+  "answer": "I couldn't get the current temperature in Lyon. The weather service didn't recognise the city under any of the names I tried: \"Lyon\", \"Lyon, France\", \"Lyon, Auvergne-Rh\u00f4ne-Alpes, France\" and \"Lyon, FR\". Its error message gives a US-style example (\"San Francisco, CA\"), so it may not support cities outside the US.\n\nIf you know another name the service might accept, I can try that. Otherwise, a site like M\u00e9t\u00e9o-France or a general weather app will have Lyon's current temperature."
+ }
+}
