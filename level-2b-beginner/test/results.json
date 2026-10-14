@@ -1,0 +1,857 @@
+{
+  "chart_trend": {
+    "seconds": 6.9,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 796,
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "thinking_tokens": 96
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "The chart shows steady quarter-over-quarter revenue growth throughout 2026, rising from $88.2M in Q1 to $111.1M in Q4, an increase of about 26%. Growth was fairly consistent through Q3 (about $6M per quarter) before accelerating sharply in Q4 with a $10.3M jump, though the y-axis starting at 80 makes the overall climb look steeper than it is.",
+    "content": [
+      {
+        "signature": "CAQS2wQKEggSEAEYAjgBQgh0aGlua2luZxIMAkEJx8SjiixdQGJVGgxXXI2rRlUrMIP0FHMiMLtoWntSkj8AjbaP+sSIX2BYpWW/j58HZWI4kRr28QFa9/FWr0PXNcgqNRRTQ/WDPyr2A/9Q8HLwu0YgxJYC/m1HThAVs2fxAdoCDcYRQZ0ZRlvyybGK0LrOrYcJletYmr9Hy0RmLY3oVkrOJQWJbeU9yfAMSFYzwJl6IZvfrhBU0l6134OA3WySe7G4Tz1XQBB0kf8vtLW1h+jidKUzVmU/iqRdAQzfOrC9n4OyeebUAHI09k0M7jCrUEs7/2Ybhdv4c3KCD+6WjUMBCSLJQITqnCaz2gimRzxyu4kRBSG8Q+bb6I2XR5ttAVeeMwR+3UGUB7wLrT/yXFup8osa/xJcqaDia4uJGkaX5f8ea7vU7u4WczCpaPVrbgD93sF5RVC6IfPJyecpfsaP/HXpZdYGi/abiL4bhPPiuZ6NwRcPRKoIYZ8IREgMclElAPJ40pvGNDe6JEG5RYoAngLfvaWV5AD7/pPFXKTywOtP0+z6SS+oPEBBfPaXU1q/unS2fXRvKy8T4Zdbw2vrXkkNCaNjt9tdPqku+5dskxng9hRHQH7i+T4OKdWQikQJJGMJRdyKsd3Q3twzjfTX8IAE0gOFQ5ZDeCTxnRNc6yJimkuhgAyemqsjnx2LjkbfawY2MdklUZgVEmn/gwkeGpRkB29OcHeIxhkWbF56Otz9dBKitAr5g3iKOqRF1Qm3y703iarGN72sFwLTh5Z18Jprnq/ZOUzVOs1LpI8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "The chart shows steady quarter-over-quarter revenue growth throughout 2026, rising from $88.2M in Q1 to $111.1M in Q4, an increase of about 26%. Growth was fairly consistent through Q3 (about $6M per quarter) before accelerating sharply in Q4 with a $10.3M jump, though the y-axis starting at 80 makes the overall climb look steeper than it is.",
+        "type": "text"
+      }
+    ]
+  },
+  "chart_compare": {
+    "seconds": 11.6,
+    "stop_reason": "max_tokens",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 1607,
+      "output_tokens": 400,
+      "output_tokens_details": {
+        "thinking_tokens": 142
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "**Asia Pacific grew the most, by about $6.4M (roughly 35%)**, from $18.2M to $24.6M.\n\n**Where I read each number:** All values come from the labels printed above each bar.\n\n| Region | Q3 (Image 1) | Q4 (Image 2) | Change | % Change |\n|---|---|---|---|---|\n| North America | 42.0 (1st bar, blue) | 44.1 (1st bar, blue) | +2.1 | ~+5.0% |\n| Europe | 31.5 (2nd bar, green) | 33.0 (2nd bar, green) | +1.5 | ~+4.8% |\n| **Asia Pacific** | **18.2** (3rd bar, orange) | **24.6** (3rd bar, orange) | **+",
+    "content": [
+      {
+        "signature": "CAQS+wQKEggSEAEYAjgBQgh0aGlua2luZxIMF1PN/XmxmKuB2CbtGgx8H1H0DjGghv5BjBEiMBNO/JJeLcaJRqjUDElla+3F/56yL82UlToCUCO6H5ytYu7vso/qSSoei+osZQwE6iqWBMHlvA/shneoXL/5zNiVlZ9xSL0BeJNLK5neNMfIE/P0sjbl69wtHgcIAEiqMAEgKiusG24Z9VFDJ7pvf2kE27n6+zJ2t8051TXoYorAnIasNvgYjXVhV0MCqLaWLZlUCE9EMQjS+/LnGetx7YvH6eQYTuI9lbyVYD7PLeKxllrxcKjSERC69c+YzCL+lu3lGjY+hG7/pZS9Vo3xHFvZZGrH+4cJqM8ScK4/Cv0QCb6PdTzyonuGkNmfrkDaMeXmvmtQ1Y8UKu5j+YOonKSpTw2ye07h7ZfXjRAdOVJmYwKgE5Rl8mUhlyWbcdKJmVV+5MwJEc8hrE9AucVECHUthDB34K+Ksg1mrwdiUCg9JW236jX6IG+ydsXy7X5ti3t3DCALXcYkdFvyDMWx35RaqSTrHDoyPySBG4Kw/N/KxdWwNBj/Z74eySo2AwxQEKRwHb2g8LvR+eIX6IskCg6iEyLFw11PBPnogYwY7E/V87xJd9a8QeOi0eyTJxSJj/A8NMSjLJMOmnbXjcfrtB21fcU2KsaTQpESUXTEO5X69+tJJWeAWYcxQ14d5UnmmTKi9m2bO16g82ppykXVR9TixtBl0ziubgr7ncjrlRE/2H/BMHbgqNVBXWXBJy7LVSeaHS5SARTL4eUoz09HRF8MD2KhDNQgwcuQkCSsJYCVba2zvbS6NKbXMGDoTnek3wKHVTAmCJ/QghgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "**Asia Pacific grew the most, by about $6.4M (roughly 35%)**, from $18.2M to $24.6M.\n\n**Where I read each number:** All values come from the labels printed above each bar.\n\n| Region | Q3 (Image 1) | Q4 (Image 2) | Change | % Change |\n|---|---|---|---|---|\n| North America | 42.0 (1st bar, blue) | 44.1 (1st bar, blue) | +2.1 | ~+5.0% |\n| Europe | 31.5 (2nd bar, green) | 33.0 (2nd bar, green) | +1.5 | ~+4.8% |\n| **Asia Pacific** | **18.2** (3rd bar, orange) | **24.6** (3rd bar, orange) | **+",
+        "type": "text"
+      }
+    ]
+  },
+  "pdf_findings": {
+    "seconds": 16.0,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 5559,
+      "output_tokens": 591,
+      "output_tokens_details": {
+        "thinking_tokens": 263
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "## Three key findings\n\n1. **Self-serve adoption surged.** 61% of new accounts in Q4 started on the self-serve tier, up from 22% in Q1.\n2. **Infrastructure efficiency improved.** Migrating the query engine to the new storage layer cut compute cost per query by 38%. As a result, operating cost rose only 1.7% from Q3 to Q4 while revenue grew 10.2%.\n3. **Revenue diversified by region.** North America's share of revenue fell from 54% in Q1 to 40% in Q4 as Europe and Asia Pacific grew. Asia Pacific grew 35% quarter over quarter, the fastest regional growth in company history.\n\n## Highest operating margin\n\n**Q4 2026 had the highest operating margin at 24.1%**, on revenue of $111.1M and operating cost of $84.3M. Margins in the other quarters were 19.0% (Q1), 20.7% (Q2), and 17.8% (Q3).",
+    "content": [
+      {
+        "signature": "CAQS6wYKEggSEAEYAjgBQgh0aGlua2luZxIM53FbjHS68C20V9K+Ggy6yg/ZpIntLr4U++0iMAXTCjlDFG0Ggnyi+q0iR0Uvy059LlSwQT/En5Wcdg47J3y0giBG9/8ToRqG2d38xCqGBt3/8aOBYUmEYf131HauFvmKc9bWtYvcf6us5ZBXW2kzcc6wwMulQJh/nGcgfTev8w6lXnYPrpjAEGtWEoOAe16QgVMV5B+f3n5NuDFQAsAZMYx8QlGuo6T1qWePq4zHuH9o4HCL8XxorUORoSDMkOyarADqb8AM7hMHQfAbnhEInyBCQqB6LRYF8UfiQ86yDxd5jxdyR3+IDR1qJZcziGv5SwikY67ZkseN+UXzDaGMJcahAlZqckZIaSPlVZPMxK+r5cNATVSHg1EUX8sxqZSo2ztggh8asiLD+pmbltJy8Nb7zbvpo1rcErB3i8CSvrlZ0G64IGzdV8cv8mkmeF0ENaPht/m8ADEi+XXDqtYacXPhs3hcOgbnuFZLaNmIgSxEkdSeN5Yiqxiev6mBAYkZ20gj+O6SAy/M1bz19JoVKMu1slLekhsfTHTU7oltCmQymN83rDJy04IgR90e05J/nLpJl2u2rk+q0UlIXDmZtjTJheH6k1zFruk+QRbUrqWi2ZtjiOrjx6pa10nCbZepU7JvjpeKqaLf6BzXBcy+0iX6BGPQR80g1LhZORwkLnU6U7CWzG+wTcMpdSewtgtfiB35+sUuyog3ql+SFA9R0YXCwGPIPrdZu5MyCVHeS6hS5rC2ygwgtLt+BXRACKzJuX/ZFa9Jm3BT9EFw4+v0FvaA76fPkBQmLBPmUKP8m8/aVUH59zw2GONG0Sy9R9CHFjYX7t0fdaBobkSGrxV0A5Nq2Z2bnZQ/bnRx0FynRTtjvbRs96AKSWquqN8A9PMlNMyAc0C2A5pqD9H83SDR3DnDye29oP+FrrJJGjU5VZ8grrpL7U92g7sPRyVDbRZVLTS4nReK+gTntQBMUA2vMuPppWO70K9re2hTOKDt4QmE6Iax+rmRVH1bZIezG589OXGMXH9YmoylTKHOHR9PjbRSdObH36k69gxDBpJlfvIMBaZLVwzN+lA6eOehOeJeIAXK4w2ZaAsCQZbK6rxwvdf1gPl+RQTsZI1fXm5m3QCFI9RF8hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "## Three key findings\n\n1. **Self-serve adoption surged.** 61% of new accounts in Q4 started on the self-serve tier, up from 22% in Q1.\n2. **Infrastructure efficiency improved.** Migrating the query engine to the new storage layer cut compute cost per query by 38%. As a result, operating cost rose only 1.7% from Q3 to Q4 while revenue grew 10.2%.\n3. **Revenue diversified by region.** North America's share of revenue fell from 54% in Q1 to 40% in Q4 as Europe and Asia Pacific grew. Asia Pacific grew 35% quarter over quarter, the fastest regional growth in company history.\n\n## Highest operating margin\n\n**Q4 2026 had the highest operating margin at 24.1%**, on revenue of $111.1M and operating cost of $84.3M. Margins in the other quarters were 19.0% (Q1), 20.7% (Q2), and 17.8% (Q3).",
+        "type": "text"
+      }
+    ]
+  },
+  "cite_text": {
+    "seconds": 1.3,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 863,
+      "output_tokens": 27,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "The grass is green.",
+    "content": [
+      {
+        "citations": [
+          {
+            "cited_text": "The grass is green. ",
+            "document_index": 0,
+            "document_title": "Nature facts",
+            "end_char_index": 20,
+            "file_id": null,
+            "start_char_index": 0,
+            "type": "char_location"
+          }
+        ],
+        "text": "The grass is green.",
+        "type": "text"
+      }
+    ]
+  },
+  "cite_pdf": {
+    "seconds": 11.2,
+    "stop_reason": "max_tokens",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 6624,
+      "output_tokens": 400,
+      "output_tokens_details": {
+        "thinking_tokens": 147
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "The operating margin in Q4 2026 was **24.1%**, the highest of any quarter in 2026. Q4 2026 revenue was $111.1M, operating cost was $84.3M, and operating margin was 24.1%. The report defines operating margin as operating income divided by revenue, and the figures check out: ($111.1M \u2212 $84.3M) / $111.1M \u2248 24.1%.\n\nThe margin rose from 17.8% in Q3 because operating cost rose only 1.7% from Q3 to Q4 despite the revenue increase, reflecting the full-quarter effect of the storage migration completed in September.",
+    "content": [
+      {
+        "signature": "CAQSoQUKEggSEAEYAjgBQgh0aGlua2luZxIMh1MWyZ6y8id/jLo9GgwCUKNnPia9AVM+pREiMFembm+2FZJSQlMJRIKBf/qJWT3mnTV8eJfhZR1crCvUj1z8/Foxvdsrw1YS4F4qCSq8BEogCwSKnC42zwt2C9yBrKgIDZJ3GgHhkZrFpNfRj7jEw4Rrsh7atlHRqScCCp9kmQ3B/uopDv/kCsR3vlGSx4HMg6qAFEgQrSaCHGRPqpm2V0oDIxW8ndi3Ez/T/V5umED5SpQgVlwCL+HygDYXEbz6PPsM9g/QlbCknZtd3MwXCkpLYe80C7l3AaXIGXc26Aj46ZN+nJAlXVvu44ad/Ud9v7KNL58cvnpIrH8AT4DWq9t7uIelfggsIh0eMY1l9WnQlePj2d05XYhNW1kwIW/MKjjoSbD3cWxCeUlX/AVHrpn30GP73phZgNRC3qTfjvbJJvK7jIrhFbmX2FpiSy9AWncD1yvSJfsFWjNHCj0Br/RebJ2Qz1V87eK1Tcl0P7/ZSRnrAMeQSE54YrwH1YbZqf3ZN6oUDtReQHFFr91m1myMowlKaCw2Gk/sM4sXu/cdsdvjxBIb7VhI/xzKmefY9BT18cjyo9XBW6of4e/hvuFrRt4Jcr2NLIptMPLR0Hmbcw2+pQKhCZoLfYi6IVYCNFNmGV8sxcQTvEQDY048BVSC/tpnpH13ncrYyGQIFTxhPSXTYrH+BuTES62rv+tpa7u4EzmRPTlPj4p3yvXRL3UAbDi0REU/YWZZTOaLiWtc0GUhc+ezikNzVKqUBYgbF7LEz0bAPz0URyK60NPzbaH8ziDaXtpDXYHskzPx4gl+RNLm0g4g9/DDREZtkb6YxEmQL6vWLvR4vTB071FzCojBIjMBjkqvSOq5GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "The operating margin in Q4 2026 was **24.1%**, the highest of any quarter in 2026. ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Quarter Revenue ($M) Operating Cost ($M) Operating Margin\r\nQ1 2026 88.2 71.4 19.0%\r\nQ2 2026 94.7 75.1 20.7%\r\nQ3 2026 100.8 82.9 17.8%\r\nQ4 2026 111.1 84.3 24.1%\r\nOperating cost rose only 1.7% from Q3 to Q4 despite the revenue increase, reflecting the full-quarter\r\neffect of the storage migration completed in September. ",
+            "document_index": 0,
+            "document_title": "Q4 2026 report",
+            "end_page_number": 3,
+            "file_id": null,
+            "start_page_number": 2,
+            "type": "page_location"
+          }
+        ],
+        "text": "Q4 2026 revenue was $111.1M, operating cost was $84.3M, and operating margin was 24.1%",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": ". The report defines ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Operating margin is operating income divided by revenue.\r\n",
+            "document_index": 0,
+            "document_title": "Q4 2026 report",
+            "end_page_number": 3,
+            "file_id": null,
+            "start_page_number": 2,
+            "type": "page_location"
+          }
+        ],
+        "text": "operating margin as operating income divided by revenue",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": ", and the figures check out: ($111.1M \u2212 $84.3M) / $111.1M \u2248 24.1%.\n\nThe margin rose from 17.8% in Q3 because ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Quarter Revenue ($M) Operating Cost ($M) Operating Margin\r\nQ1 2026 88.2 71.4 19.0%\r\nQ2 2026 94.7 75.1 20.7%\r\nQ3 2026 100.8 82.9 17.8%\r\nQ4 2026 111.1 84.3 24.1%\r\nOperating cost rose only 1.7% from Q3 to Q4 despite the revenue increase, reflecting the full-quarter\r\neffect of the storage migration completed in September. ",
+            "document_index": 0,
+            "document_title": "Q4 2026 report",
+            "end_page_number": 3,
+            "file_id": null,
+            "start_page_number": 2,
+            "type": "page_location"
+          }
+        ],
+        "text": "operating cost rose only 1.7% from Q3 to Q4 despite the revenue increase, reflecting the full-quarter effect of the storage migration completed in September.",
+        "type": "text"
+      }
+    ]
+  },
+  "hb_vacation_ok": {
+    "seconds": 15.3,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 12160,
+      "output_tokens": 200,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "New employees get 15 vacation days. According to the handbook, new employees receive 15 days of paid vacation in their first year of employment, accruing at 1.25 days per month from the start date.\n\nThat goes up with tenure: after three years of service the entitlement increases to 20 days per year, and after six years to 25 days.\n\nOther time off is separate from vacation. All employees receive 10 paid company holidays per year and 8 days of paid sick leave.",
+    "content": [
+      {
+        "citations": null,
+        "text": "New employees get 15 vacation days. According to the handbook, ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Paid time off\r\nNew employees receive 15 days of paid vacation in their first year of employment, accruing at 1.25\r\ndays per month from the start date. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 5,
+            "file_id": null,
+            "start_page_number": 4,
+            "type": "page_location"
+          }
+        ],
+        "text": "new employees receive 15 days of paid vacation in their first year of employment, accruing at 1.25 days per month from the start date.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n\nThat goes up with tenure: ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "After three years of service the entitlement increases to 20 days per\r\nyear, and after six years to 25 days. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 5,
+            "file_id": null,
+            "start_page_number": 4,
+            "type": "page_location"
+          }
+        ],
+        "text": "after three years of service the entitlement increases to 20 days per year, and after six years to 25 days.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n\nOther time off is separate from vacation. ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "In addition to vacation, all employees receive 10 paid company holidays per year and 8 days of paid\r\nsick leave. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 5,
+            "file_id": null,
+            "start_page_number": 4,
+            "type": "page_location"
+          }
+        ],
+        "text": "All employees receive 10 paid company holidays per year and 8 days of paid sick leave.",
+        "type": "text"
+      }
+    ],
+    "printed": "New employees get 15 vacation days. According to the handbook, new employees receive 15 days of paid vacation in their first year of employment, accruing at 1.25 days per month from the start date. [p.4]\n\nThat goes up with tenure: after three years of service the entitlement increases to 20 days per year, and after six years to 25 days. [p.4]\n\nOther time off is separate from vacation. All employees receive 10 paid company holidays per year and 8 days of paid sick leave. [p.4]"
+  },
+  "hb_stipend_ok": {
+    "seconds": 16.7,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 12160,
+      "output_tokens": 520,
+      "output_tokens_details": {
+        "thinking_tokens": 71
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "The handbook doesn't describe an ongoing remote-work stipend, such as a monthly payment for internet or utilities. The closest thing is a **one-time home-workspace allowance** in Section 5 (Equipment and workspace):\n\n- **Amount and purpose:** Each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting.\n- **Deadline:** Receipts must be submitted within 60 days.\n- **Ownership:** Equipment purchased with the allowance belongs to the employee. If you leave the company, company equipment must be returned within 10 days of the last working day; the equipment allowance purchases from section 5 are not returned.\n\nYou also get standard equipment separately: every employee receives a company laptop and may choose a monitor, keyboard and headset from the approved catalogue.\n\nIf you're asking about a recurring stipend, the handbook doesn't mention one. You can confirm with your manager or People Operations at people@northwind.example.",
+    "content": [
+      {
+        "signature": "CAQSgAUKEggSEAEYAjgBQgh0aGlua2luZxIMaieiLo8IFqF8kvgtGgw5snsf5GUYI1ZAOPEiMMj+BfCXsMhVTASRFiG/iQg43BGizF3I/MDguI7/rhIXz5+4WRpEkou7XvIH0Q2StCqbBPF4BOb7Be+t9EOT4V903h1zpxlFCASEvCLZVcdUgOCvlH9GoIBT7OnmUm+SFfCPFRqmxjepKBXE2y6bUdDYacxWf+k5DgbaaEyHtYXJmUSfmgg4wVZS2wt9sUhuJ/TC6ZH/xjybRcPqtM99k1+JaMTTgUtxCcggq767qWH95uQcvJv/cqXDTv4gCENc9iJv2ykhHyXM9D2NEJlLUK6sIPmZFYZNlA2uQ+gH2rS5vcQgYrG1DsjiexRGz+vHiLGY8+7K75I/8QSXCerCte2gLXjBt+oMRkJiJl3ZAKhMatN72JHC1K5VWxy1Qy9ZDQj5FEbwipM/aoIRodZhgJU1YrIjOnsncArlKxvy4fS8eJ/y+zCyVSdganTPxlmi9kh8Kdi5NwvIL7LHvD6Zru0hTz/7CIEUUcSqCdNzoI7zuS+LHInQeidj/GWkr+PKVAHjwmTUrNGwobMeEV5CqKFErXBbkdi+xwaS/UHkVLJsrWLoGV5IDkKUkU5rDyUsBKD16tmSgryiYaYjo2ye/Ign0lZFTaLXYAP8jLJhIN1nvR3+GumTQSaESz3TO/ZwwxNURhNKUvj0n0le6SWZm15ztgVDF0FkDI19OVLC8t2kLVFn1zOBNrTBlVfUudZ80H8Ta+oj6ejZ3TYSWr05xyArRKD7ZmQFu1hLAIsK2Z9u34XxCJZE2png4QpEcR8/UeN7Z7fnt/j3woVjdY5bGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "The handbook doesn't describe an ongoing remote-work stipend, such as a monthly payment for internet or utilities. The closest thing is a **one-time home-workspace allowance** in Section 5 (Equipment and workspace):\n\n- **Amount and purpose:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "In addition, each employee receives a one-time equipment allowance of $500 in\r\ntheir first month to furnish a home workspace, for items such as a desk, a chair or lighting. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n- **Deadline:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Receipts\r\nmust be submitted within 60 days. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Receipts must be submitted within 60 days.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n- **Ownership:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Equipment purchased with the allowance belongs to the employee.\r\n",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Equipment purchased with the allowance belongs to the employee.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": " If you leave the company, ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Company equipment must be returned within 10 days of the last\r\nworking day; the equipment allowance purchases from section 5 are not returned.",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 7,
+            "file_id": null,
+            "start_page_number": 6,
+            "type": "page_location"
+          }
+        ],
+        "text": "company equipment must be returned within 10 days of the last working day; the equipment allowance purchases from section 5 are not returned.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n\nYou also get standard equipment separately: ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Equipment and workspace\r\nEvery employee receives a company laptop and may choose a monitor, keyboard and headset from the\r\napproved catalogue. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "every employee receives a company laptop and may choose a monitor, keyboard and headset from the approved catalogue.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n\nIf you're asking about a recurring stipend, the handbook doesn't mention one. You can confirm with ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Questions about any policy should go to your manager or to People\r\nOperations at people@northwind.example.\r\n",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 2,
+            "file_id": null,
+            "start_page_number": 1,
+            "type": "page_location"
+          }
+        ],
+        "text": "your manager or People Operations at people@northwind.example.",
+        "type": "text"
+      }
+    ],
+    "printed": "The handbook doesn't describe an ongoing remote-work stipend, such as a monthly payment for internet or utilities. The closest thing is a **one-time home-workspace allowance** in Section 5 (Equipment and workspace):\n\n- **Amount and purpose:** Each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting. [p.3]\n- **Deadline:** Receipts must be submitted within 60 days. [p.3]\n- **Ownership:** Equipment purchased with the allowance belongs to the employee. [p.3] If you leave the company, company equipment must be returned within 10 days of the last working day; the equipment allowance purchases from section 5 are not returned. [p.6]\n\nYou also get standard equipment separately: every employee receives a company laptop and may choose a monitor, keyboard and headset from the approved catalogue. [p.3]\n\nIf you're asking about a recurring stipend, the handbook doesn't mention one. You can confirm with your manager or People Operations at people@northwind.example. [p.1]"
+  },
+  "hb_stipend_bad": {
+    "seconds": 24.2,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 12150,
+      "output_tokens": 523,
+      "output_tokens_details": {
+        "thinking_tokens": 88
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "text": "The handbook doesn't describe an ongoing remote-work stipend, but it does offer a **one-time home-workspace allowance of $500**.\n\n**The allowance:** Each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting.\n\n**Conditions:**\n- Receipts must be submitted within 60 days.\n- Equipment purchased with the allowance belongs to the employee. If you leave the company, company equipment must be returned within 10 days of the last working day; the equipment allowance purchases from section 5 are not returned.\n\n**Separate from the allowance:** Every employee receives a company laptop and may choose a monitor, keyboard and headset from the approved catalogue. These are company equipment, not part of the $500.\n\nThe handbook doesn't mention any recurring monthly payment for things like internet, phone or utilities. For questions about that, you can contact your manager or People Operations at people@northwind.example.",
+    "content": [
+      {
+        "signature": "CAQSuAUKEggSEAEYAjgBQgh0aGlua2luZxIMlRGGkFdoPxs9n1txGgyxK0YizXaYbYsGP5YiMHVZ4Zlh9oudgL6y+UROW3U4nKvUPEHe41MgU4GV44CW5yiLMVae+Yi9gSZF8mW5lSrTBI/zWebejRzRwDGegV7bgVWiHkdRTGbf2kYb9y3utJKjlRajU6eh/MnHy1zAHmRoHCzu1x8irwO4AVbaAzb/9oNHWYDo91W/2HLf9ZrLdfVKqSvF0DtKRqAvCeS5G2W0hq8S9mkS/vQmV0H89+hgfjYQhJlWW75XyuAJWH7hUQo6wHJxEQ4l/HcsuTEOtVFtkPteKQt88Ra+Bw9rlSJq/sB1TByfsSk+dESa+VCX7d/KKuN3Kvoh/I+xDX5vvzr6ejLC+1gD9WO2Himy02yLB6sh98BPNJ8F5CoPX9TxddDYW0Kp6gQY6bgBPK5Jr8m1QPkQT6sV6z87Ooxwu3TWCu2DCgYQDMNKdWvZjf9Q2dEYy8CfwBYb3Zcj8gOD+2eAkd9uzv0zbxdADQYJwf/eiT9jAhWTE26DnI14hFe2gozyVliOkDCRO6HfkoLH65OzJItjTpFDduTQuaIQLVcM8yWWaabYjlRIiFvgsGOrnls/YpN17LsCp3jppcJFxzYfCv6fZY8z89GBP5yThnUBRj7k9KEGbrlRTlE0Jteaavj9w/+hnASGIcNZ2TtY+1LfV/7nbHcnSUNo9paCtM4FB4B0P2/gIlznnap/VmhrtrW03OMLe1CbHW5me6xH4ha2rgPG4ksSWojPk4PPzZHCo/nzRPMGmCbO4El02EKhzzKxI+6nPAFL6the8w3YJj5aDF5VzIsVSWqFpPr3CpnwTEByoFr6KK2F1GWUDnWF7a/OM5uHhZ0z6moBhv/YuFjMwP0zlHqlRM7Xt/uNwRyk3W2ttigYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "The handbook doesn't describe an ongoing remote-work stipend, but it does offer a **one-time home-workspace allowance of $500**.\n\n**The allowance:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "In addition, each employee receives a one-time equipment allowance of $500 in\r\ntheir first month to furnish a home workspace, for items such as a desk, a chair or lighting. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n\n**Conditions:**\n- ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Receipts\r\nmust be submitted within 60 days. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Receipts must be submitted within 60 days.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n- ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Equipment purchased with the allowance belongs to the employee.\r\n",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Equipment purchased with the allowance belongs to the employee.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": " If you leave the company, ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Company equipment must be returned within 10 days of the last\r\nworking day; the equipment allowance purchases from section 5 are not returned.",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 7,
+            "file_id": null,
+            "start_page_number": 6,
+            "type": "page_location"
+          }
+        ],
+        "text": "company equipment must be returned within 10 days of the last working day; the equipment allowance purchases from section 5 are not returned.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n\n**Separate from the allowance:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Equipment and workspace\r\nEvery employee receives a company laptop and may choose a monitor, keyboard and headset from the\r\napproved catalogue. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Every employee receives a company laptop and may choose a monitor, keyboard and headset from the approved catalogue.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": " These are company equipment, not part of the $500.\n\nThe handbook doesn't mention any recurring monthly payment for things like internet, phone or utilities. For questions about that, you can contact ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Questions about any policy should go to your manager or to People\r\nOperations at people@northwind.example.\r\n",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 2,
+            "file_id": null,
+            "start_page_number": 1,
+            "type": "page_location"
+          }
+        ],
+        "text": "your manager or People Operations at people@northwind.example.",
+        "type": "text"
+      }
+    ],
+    "printed": "The handbook doesn't describe an ongoing remote-work stipend, but it does offer a **one-time home-workspace allowance of $500**.\n\n**The allowance:** Each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting. [p.3]\n\n**Conditions:**\n- Receipts must be submitted within 60 days. [p.3]\n- Equipment purchased with the allowance belongs to the employee. [p.3] If you leave the company, company equipment must be returned within 10 days of the last working day; the equipment allowance purchases from section 5 are not returned. [p.6]\n\n**Separate from the allowance:** Every employee receives a company laptop and may choose a monitor, keyboard and headset from the approved catalogue. [p.3] These are company equipment, not part of the $500.\n\nThe handbook doesn't mention any recurring monthly payment for things like internet, phone or utilities. For questions about that, you can contact your manager or People Operations at people@northwind.example. [p.1]"
+  },
+  "break_a_bad_nocite_leading": {
+    "system": "Answer questions about the document.",
+    "question": "How much is the monthly remote-work stipend, and how do I claim it?",
+    "citations": false,
+    "model": "us.anthropic.claude-opus-5-5",
+    "text": "**The handbook doesn't describe a monthly remote-work stipend.** The closest benefit is a **one-time** home-workspace allowance (Section 5, Equipment and workspace):\n\n- **Amount:** $500, given once in your first month.\n- **What it covers:** Items to furnish a home workspace, such as a desk, chair, or lighting.\n- **How to claim it:** Submit receipts within 60 days. The handbook doesn't say where or how to submit them.\n- **Ownership:** Anything you buy with it belongs to you, and you keep it if you leave (Section 11).\n\nYou also receive a company laptop and can choose a monitor, keyboard, and headset from the approved catalogue.\n\nSeparately, Section 6 says reasonable business expenses are reimbursed if you submit receipts within 30 days. This covers general work costs, not a recurring remote",
+    "stop_reason": "max_tokens",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 10627,
+      "output_tokens": 350,
+      "output_tokens_details": {
+        "thinking_tokens": 71
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "content": [
+      {
+        "signature": "CAQShwUKEggSEAEYAjgBQgh0aGlua2luZxIMjuXJC+/yZTHuqccUGgwKA8PUwoKH4Em+nF0iMEBBVyEQJciaUCGCd07XQ2ecgkW8ka0zro1GqIKVIpAsMlcWH5VQdbBuOxn+97lkzyqiBJTT0L+YWkGQURT4kakRalfU13iGfbV4YLZJhCH/qZMdZEfQE2pEgpsj2DzQ9U0hOoIY/B6XLE/N2Ddc4NyDscw0SG9totvHKpMtUv/Ee4eLWWflWpr+2p5LByECK5vsBAxwIhneCTgUYM4fyYOtcsDmizlaHmEvUbmN4QP4rq7ipzJk51JoUQ6Kg9/NyFVtJurO+CH971oj7BClYNtVcKO+oJ+VhZeK+JWi+Bn0CN73tW2IYIIvXr9nDUgPLwCT5H4hjyjg6sUJCqMdQDE9HsCncoZZNmL5UTTHo1N8OC//pFBplmOiu2mhijbdL45Pqz8WKAv1/lorFp5/i/XqwCHqNnNWM3SEmNf+Q1CpirKuTASbwH3gNkk9YSPnA1ovWXiiNPCn+tdbY+qhIV9LNJNoBBkHmX7S8SWwxb0GKLmSPSLB8LcnlpMXQQVvn65i5LYNxxPJio3FKYbVmei+l59Lqdij14l8fBHSiPCyesSWK1xkTY5abAIhSm2V7N8yceunM0dFrZGSzR54EpDRI8QEugi5+CUoBRjol0A3TQOiKxhczBIrwBuYsjtvMO9IxMrFLyi9c4HW5g8B51212BJDMkXqjJhd1JWjHW2yAxrXzzSQRpcncr9zyGED0oKTcEkDo7XiI1AkzxEmDC9TSNrJTBTew1Atfiy8uDjgbWuM7k6fbx5mpkqs9zcsWuFWVnZfCaj5VYX/AadZFUv4y+M/YRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "**The handbook doesn't describe a monthly remote-work stipend.** The closest benefit is a **one-time** home-workspace allowance (Section 5, Equipment and workspace):\n\n- **Amount:** $500, given once in your first month.\n- **What it covers:** Items to furnish a home workspace, such as a desk, chair, or lighting.\n- **How to claim it:** Submit receipts within 60 days. The handbook doesn't say where or how to submit them.\n- **Ownership:** Anything you buy with it belongs to you, and you keep it if you leave (Section 11).\n\nYou also receive a company laptop and can choose a monitor, keyboard, and headset from the approved catalogue.\n\nSeparately, Section 6 says reasonable business expenses are reimbursed if you submit receipts within 30 days. This covers general work costs, not a recurring remote",
+        "type": "text"
+      }
+    ]
+  },
+  "break_b_nosys_nocite_leading": {
+    "system": null,
+    "question": "How much is the monthly remote-work stipend, and how do I claim it?",
+    "citations": false,
+    "model": "us.anthropic.claude-opus-5-5",
+    "text": "**The handbook doesn't mention a monthly remote-work stipend.** The closest benefit is a **one-time home workspace allowance** (Section 5, Equipment and workspace):\n\n- **Amount:** $500, one time only\n- **Timing:** Provided in your first month\n- **What it covers:** Items for a home workspace, such as a desk, chair, or lighting\n- **How to claim:** Submit receipts within **60 days**. The handbook doesn't say where to submit them.\n- **Ownership:** Anything you buy with it is yours, and you keep it if you leave the company (Section 11).\n\nSeparately, the company provides a laptop, and you can choose a monitor, keyboard, and headset from the approved catalogue.\n\nIf you heard about a recurring monthly stipend, it may come from a separate policy, your offer letter, or a local arrangement. You can check with",
+    "stop_reason": "max_tokens",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 10617,
+      "output_tokens": 350,
+      "output_tokens_details": {
+        "thinking_tokens": 70
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "content": [
+      {
+        "signature": "CAQShQUKEggSEAEYAjgBQgh0aGlua2luZxIMPIACT68FhU1DvdijGgwJruDirAfqKtSXp7AiML1Ad5qil2h/loQlQaGz5IRAm+uzTyOrFAku9ejXG0lU0246YZBALRRa5hY408T33SqgBIiEXeEarZhZw54VylwxkQUpgs8L1DsRE2odbujB3DLnnak8DY60mdbcWEpzp9f6Q3Fawe/lgWg/EOo93BZEts5b9yVorzmVivLmyxWPrSJt7Po9YdXkR1lMTa1xy6hALGdSr2w3hz37PFNuDj6DvYLZYx0rdI9zGg/tRLFgb8Q3hErVE0VOdqIdXsff/NdUtyxgiQSjtziLFlpn2XRukeIch1E/1vhdjUhHsBYIAw4ToBfpTANbTah0XWkHIFeaOFjaJHv5Il/Jc+CuqutSrv9lwdKFo57MSQbFJB8Tq/8qUMBQFHHkgnCKpUjlSu1UHwckLVyoVXJCXymNH8VRaUQZrrATiuY9HKhnoChghUAmtpgrUkxkqi0q9YOnBFhNb2Z8kL3rz+fteuY78QEL+TKUjQTUnDBBHGqD3zrT7iLYPIUYGV7yS3wzJGFm4o0v94hShKbCuAsd9Bi2cf4zIlpLdToQvvTRtujAK06FLoTsAlz2TNVlDmjFsP1DaUbQBw5Lq6hVWo+wT66WA1tgun0NUF28Qyl0/g3IOzffuRw9OpWBb2je03LnG+bg5nCLfIkA9hNKT/URk3M8r1/rAt836B78pKjG/AG+RFn+qxwNAfmOwPwIcRBffGgLQwCSv7A9tt7VpET/njpAQL5C/M4wDMZ1Ono6/XJewqAo/AkxF5OY7pCN6VxRmnB/BBOQCR+7jcUwKQ7rQLkmubT9Oz8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "**The handbook doesn't mention a monthly remote-work stipend.** The closest benefit is a **one-time home workspace allowance** (Section 5, Equipment and workspace):\n\n- **Amount:** $500, one time only\n- **Timing:** Provided in your first month\n- **What it covers:** Items for a home workspace, such as a desk, chair, or lighting\n- **How to claim:** Submit receipts within **60 days**. The handbook doesn't say where to submit them.\n- **Ownership:** Anything you buy with it is yours, and you keep it if you leave the company (Section 11).\n\nSeparately, the company provides a laptop, and you can choose a monitor, keyboard, and headset from the approved catalogue.\n\nIf you heard about a recurring monthly stipend, it may come from a separate policy, your offer letter, or a local arrangement. You can check with",
+        "type": "text"
+      }
+    ]
+  },
+  "break_c_bad_cite_leading": {
+    "system": "Answer questions about the document.",
+    "question": "How much is the monthly remote-work stipend, and how do I claim it?",
+    "citations": true,
+    "model": "us.anthropic.claude-opus-5-5",
+    "text": "**The handbook doesn't describe a monthly remote-work stipend.** The closest benefit is a **one-time** home-office allowance, which may be what you're thinking of.\n\n**The one-time equipment allowance (Section 5)**\n- **Amount:** each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting.\n- **How to claim:** The handbook only says that receipts must be submitted within 60 days. It doesn't say where or how to submit them.\n- **Ownership:** Equipment purchased with the allowance belongs to the employee. If you leave, ",
+    "stop_reason": "max_tokens",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 12156,
+      "output_tokens": 350,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "content": [
+      {
+        "signature": "CAQSgAUKEggSEAEYAjgBQgh0aGlua2luZxIM/NKv6Ca7/SkpvwYxGgxcY/sJ7EnW2CaxmFAiMLYuu+kcMtTe+GNAPyNbJWmXEDdd3FsKHmC5hiGnpkDgyrHrPSmC9WL17pQfqRAyBCqbBO2MWAMVOpTTWReRgOdpW2/9qOH4uNxRRQ9WUIpvC//nKmEyGHUvoSDcz8mZneGn3BX7Jlavcy6p3+O0rawKcZisFr2/ZVvSmamDRuxbTpIpTBB2AXdz6t0aNBEtWGU5GlD72rhkrrC3RyW8aYNaNK50gApWwc67ss/VYhU3P4za1ofRs7h4Jiss7LvI3/VzsstTTzqOarlu2QnrGPcmfTId1LfcSo3++E8sO44zf+wc4J90dsQGKfYeDSY2Y1kB6PvTPkEt+dp+QGEkfhNgYThPcPvCG4+tzXlK4KnqEhkbyjKFL7HuRqzHpaSwLMASIRagFtbDiiRVyFuKVssqy6UfbTOmxNGY7w3NHB0STnveT6/K23qtxmrdD3/J9h6t5w+J/On0nUYVy4DyA+kKxBocnl4dPC1eAztUMI98C/AhHpVWMzZfr8cuUydAIRyMloUvqw6ZXYEPd5RNb/Uz5fITfKY5Cvk4XFMC6T5RiGw86heap0CRsYUWVnEUIPdRB6+AOe41a9kVRQEDeNCdusLrZzLtyD54o02bACT+j4HnhOJXWx1Qw46NKO3I1mzGLXOACReaYZ84lONm9+q+jKllJPRoTLu8hqQXHJlbIH6PZ0E1RXurxRUvorpNQ7MtBhwc+gLKDehVfQHJ8RWhz1edIP55uNYqVs3f0wfwAjqlStkjGcvS6QrDkDU7AoZ2LFG+29pdvvCCfC8qGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "**The handbook doesn't describe a monthly remote-work stipend.** The closest benefit is a **one-time** home-office allowance, which may be what you're thinking of.\n\n**The one-time equipment allowance (Section 5)**\n- **Amount:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "In addition, each employee receives a one-time equipment allowance of $500 in\r\ntheir first month to furnish a home workspace, for items such as a desk, a chair or lighting. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a desk, a chair or lighting.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": "\n- **How to claim:** The handbook only says that ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Receipts\r\nmust be submitted within 60 days. ",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "receipts must be submitted within 60 days.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": " It doesn't say where or how to submit them.\n- **Ownership:** ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Equipment purchased with the allowance belongs to the employee.\r\n",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 4,
+            "file_id": null,
+            "start_page_number": 3,
+            "type": "page_location"
+          }
+        ],
+        "text": "Equipment purchased with the allowance belongs to the employee.",
+        "type": "text"
+      },
+      {
+        "citations": null,
+        "text": " If you leave, ",
+        "type": "text"
+      },
+      {
+        "citations": [
+          {
+            "cited_text": "Company equipment must be returned within 10 days of the last\r\nworking day; the equipment allowance purchases from section 5 are not returned.",
+            "document_index": 0,
+            "document_title": null,
+            "end_page_number": 7,
+            "file_id": null,
+            "start_page_number": 6,
+            "type": "page_location"
+          }
+        ],
+        "text": "",
+        "type": "text"
+      }
+    ]
+  },
+  "break_d_helpful_hr": {
+    "system": "You are a helpful HR assistant. Always give employees a clear, specific answer.",
+    "question": "How much is the monthly remote-work stipend, and how do I claim it?",
+    "citations": false,
+    "model": "us.anthropic.claude-opus-5-5",
+    "text": "**The handbook doesn't mention a monthly remote-work stipend.** The closest benefit is a **one-time** home-workspace allowance, which isn't a recurring monthly payment.\n\n**One-time equipment allowance (Section 5)**\n- **Amount:** $500, provided in your first month of employment\n- **What it covers:** Home workspace items such as a desk, a chair, or lighting\n- **How to claim:** Submit your receipts within **60 days**\n- **Ownership:** Anything you buy with it belongs to you, and you keep it if you leave the company (Section 11)\n\n**Also provided**\n- A company laptop\n- Your choice of monitor, keyboard, and headset from the approved catalogue\n\nThese are company equipment and must be returned within 10 days of your last working day if you leave.\n\n**Ongoing costs**\nIf you have recurring work costs, such as internet or phone, the handbook only covers \"reasonable business expenses\" (Section 6).",
+    "stop_reason": "max_tokens",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 10644,
+      "output_tokens": 350,
+      "output_tokens_details": {
+        "thinking_tokens": 40
+      },
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "content": [
+      {
+        "signature": "CAQSqwQKEggSEAEYAjgBQgh0aGlua2luZxIMvHiwB/gf3F4AkYlPGgws+jHy5xA9BTDZL/EiMAnrJrtRXD36hvj3P0tLNBnogYjd7faNG+lNlOQpczS/FAwk8xYUkRvLmZzKD/1hZirGA0P/0SCohjtWTlTr4VSgTm/K3NwioiA751IL5NQWHkhG8LtmCNy2UN6li13hzP6C9xGeeG3WUBPxiO+5wDgagcx6ig9H7TAWUipuIdfdGidcuyzv+qqnhLhiM48xKENBBnSgAVkoT3GHR/Q7tyX3wcQtYA/oHEl4OkdU68G2ir51g+PFH2I10YWOqBSwqf4aGPdh53jfE/aFDpzuvayVAfDZ3N51XrrICyFHl3nc7naFfzhtQuFJSO5KvoBQwdoxzIMIpYoyE5VmjknZALKMbojASvBXXEwWLfD6XYuG7PXqxCP01kOq70KVs4w7PmjGsx7bWRDT4+O79tdyjDIvckeweODCXa+G6yYHVNxWdrZ63KwKlp73DOBaRGBqOYf5pHsr0pR96HeRiG+zYe/VvP/3B92yXPFj0fwbexqKuK0VEHL+AD/1WEb+ZQ4N4aMLcH1eqvncXgash87E+CsNnZ2mxfgvAG+s25HYILnpF97PLBXVz2aToqkp4uFSpVbRLfUwJAaysxOxzmP//xrprkZLMPTQDL/mCn+J2TTDZLPJt1Rd6eSN8Aa29QDBsdznQKkFoDzTqDUIU7aK0jOXOK/RWG5CRhwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "citations": null,
+        "text": "**The handbook doesn't mention a monthly remote-work stipend.** The closest benefit is a **one-time** home-workspace allowance, which isn't a recurring monthly payment.\n\n**One-time equipment allowance (Section 5)**\n- **Amount:** $500, provided in your first month of employment\n- **What it covers:** Home workspace items such as a desk, a chair, or lighting\n- **How to claim:** Submit your receipts within **60 days**\n- **Ownership:** Anything you buy with it belongs to you, and you keep it if you leave the company (Section 11)\n\n**Also provided**\n- A company laptop\n- Your choice of monitor, keyboard, and headset from the approved catalogue\n\nThese are company equipment and must be returned within 10 days of your last working day if you leave.\n\n**Ongoing costs**\nIf you have recurring work costs, such as internet or phone, the handbook only covers \"reasonable business expenses\" (Section 6).",
+        "type": "text"
+      }
+    ]
+  },
+  "break_e_haiku_bad_nocite": {
+    "system": "Answer questions about the document.",
+    "question": "How much is the monthly remote-work stipend, and how do I claim it?",
+    "citations": false,
+    "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "text": "# Remote Work Stipend\n\nAccording to the handbook, there is a **one-time equipment allowance of $500** provided to employees in their first month to furnish a home workspace.\n\n## How to Claim It\n\nTo claim this allowance:\n\n1. **Purchase eligible items** such as a desk, chair, or lighting\n2. **Submit receipts** within **60 days** of your start date\n3. Equipment purchased with this allowance belongs to the employee\n\n**Note:** This is a one-time allowance, not a monthly stipend. It's available only once during your first month of employment.",
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 10261,
+      "output_tokens": 136,
+      "output_tokens_details": null,
+      "server_tool_use": null,
+      "service_tier": "standard"
+    },
+    "content": [
+      {
+        "citations": null,
+        "text": "# Remote Work Stipend\n\nAccording to the handbook, there is a **one-time equipment allowance of $500** provided to employees in their first month to furnish a home workspace.\n\n## How to Claim It\n\nTo claim this allowance:\n\n1. **Purchase eligible items** such as a desk, chair, or lighting\n2. **Submit receipts** within **60 days** of your start date\n3. Equipment purchased with this allowance belongs to the employee\n\n**Note:** This is a one-time allowance, not a monthly stipend. It's available only once during your first month of employment.",
+        "type": "text"
+      }
+    ]
+  }
+}
