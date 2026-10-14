@@ -1,0 +1,86 @@
+{
+ "tool_cost": {
+  "without_tools": 18,
+  "with_one_tool": 461,
+  "method": "usage.input_tokens from max_tokens=1 calls (count_tokens not on Bedrock)",
+  "count_tokens_error": "AnthropicError('Token counting is not supported in Bedrock yet')",
+  "note": "scene tool_cost beat 2"
+ },
+ "step12": {
+  "stop_reason": "tool_use",
+  "block_types": [
+   "tool_use"
+  ],
+  "name": "get_weather",
+  "input": {
+   "city": "Paris"
+  },
+  "usage": {
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "inference_geo": null,
+   "input_tokens": 461,
+   "output_tokens": 50,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": null,
+   "service_tier": "standard"
+  },
+  "note": "scene step12_live beats 4-5"
+ },
+ "step34": {
+  "result": "18 C",
+  "final_text": "It's 18\u00b0C (about 64\u00b0F) in Paris right now. I can only get the current temperature, so I can't tell you about rain or what the forecast looks like.",
+  "final_stop": "end_turn",
+  "note": "scene step34_live beat 4"
+ },
+ "wrong_order": {
+  "error": "Error code: 400 - {'message': 'messages.2: `tool_use` ids were found without `tool_result` blocks immediately after: toolu_bdrk_016hAudaCJbU8L2YcSAPCbHe. Each `tool_use` block must have a corresponding `tool_result` block in the next message.'}",
+  "note": "scene wrong_right beat 2"
+ },
+ "right_order": {
+  "final_text": "It's 18\u00b0C in Paris right now.",
+  "note": "scene wrong_right beat 3"
+ },
+ "agent_paris_f": {
+  "question": "What's the weather in Paris in Fahrenheit?",
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'})",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18})"
+  ],
+  "answer": "It's currently 64.4\u00b0F (18\u00b0C) in Paris.",
+  "note": "scene agent_run"
+ },
+ "agent_compare": {
+  "question": "Compare Paris and Tokyo in Fahrenheit.",
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'})",
+   "[step 0] get_weather({'city': 'Tokyo'})",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18})",
+   "[step 1] celsius_to_fahrenheit({'celsius': 25})"
+  ],
+  "answer": "Tokyo is warmer than Paris right now, by about 12.6\u00b0F (7\u00b0C).\n\n| City  | Temperature (\u00b0F) | Temperature (\u00b0C) |\n|-------|------------------|------------------|\n| Paris | 64.4\u00b0F           | 18\u00b0C             |\n| Tokyo | 77.0\u00b0F           | 25\u00b0C             |\n\nParis is cool and mild. Tokyo is warm.",
+  "note": "scene agent_run"
+ },
+ "agent_atlantis": {
+  "question": "What's the weather in Atlantis?",
+  "trace": [
+   "[step 0] get_weather({'city': 'Atlantis'})"
+  ],
+  "answer": "I couldn't get weather for Atlantis because the weather service has no data for it. That makes sense if you mean the legendary sunken city, since it's a myth and not a real place.\n\nThere are some real places with that name, though:\n- **Atlantis, Florida**, a small town near West Palm Beach\n- **Atlantis Paradise Island**, a resort in Nassau, Bahamas\n- **Atlantis, South Africa**, a town near Cape Town\n\nIf you meant one of these, tell me which and I'll look it up. For the resort, I can check the weather in Nassau.",
+  "note": "scene agent_run"
+ },
+ "error_retry": {
+  "trace": [
+   "[step 0] get_weather({'city': 'San Francisco'})",
+   "[step 1] celsius_to_fahrenheit({'celsius': 15})"
+  ],
+  "answer": "It's 15\u00b0C (59\u00b0F) in San Francisco right now.",
+  "note": "scene errors beat 3"
+ }
+}
