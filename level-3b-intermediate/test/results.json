@@ -1,0 +1,488 @@
+{
+ "forced_opus": {
+  "error": "BadRequestError: Error code: 400 - {'message': 'tool_choice: type \"tool\" and \"any\" are not supported for this model.'}",
+  "trace": "^^^\n    ...<26 lines>...\n        stream_cls=Stream[RawMessageStreamEvent],\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/shahdevs/.cache/uv/archive-v0/0uGliNjyEgL3_ab1/lib/python3.14/site-packages/anthropic/_base_client.py\", line 1557, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shahdevs/.cache/uv/archive-v0/0uGliNjyEgL3_ab1/lib/python3.14/site-packages/anthropic/_base_client.py\", line 1222, in request\n    raise self._make_status_error_from_response(response) from None\nanthropic.BadRequestError: Error code: 400 - {'message': 'tool_choice: type \"tool\" and \"any\" are not supported for this model.'}\n"
+ },
+ "forced_haiku": {
+  "stop_reason": "tool_use",
+  "content_types": [
+   "tool_use"
+  ],
+  "tool_uses": [
+   {
+    "name": "get_weather",
+    "input": {
+     "city": "Paris"
+    }
+   }
+  ],
+  "text_before": "",
+  "note": "choice_live: forced on Haiku 4.5"
+ },
+ "any_opus": {
+  "error": "BadRequestError: Error code: 400 - {'message': 'tool_choice: type \"tool\" and \"any\" are not supported for this model.'}",
+  "trace": "^^^\n    ...<26 lines>...\n        stream_cls=Stream[RawMessageStreamEvent],\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/shahdevs/.cache/uv/archive-v0/0uGliNjyEgL3_ab1/lib/python3.14/site-packages/anthropic/_base_client.py\", line 1557, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shahdevs/.cache/uv/archive-v0/0uGliNjyEgL3_ab1/lib/python3.14/site-packages/anthropic/_base_client.py\", line 1222, in request\n    raise self._make_status_error_from_response(response) from None\nanthropic.BadRequestError: Error code: 400 - {'message': 'tool_choice: type \"tool\" and \"any\" are not supported for this model.'}\n"
+ },
+ "none_opus": {
+  "stop_reason": "end_turn",
+  "blocks": [],
+  "text": "",
+  "usage": {
+   "cache_creation": "CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0)",
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "inference_geo": null,
+   "input_tokens": 382,
+   "output_tokens": 1,
+   "output_tokens_details": "OutputTokensDetails(thinking_tokens=0)",
+   "server_tool_use": null,
+   "service_tier": "standard"
+  },
+  "note": "choice_live: first run returned end_turn with empty text; what blocks exactly?"
+ },
+ "final_none": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'})",
+   "[step 0]   -> 18 C",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18})",
+   "[step 1]   -> 64.4 F",
+   "[final, tool_choice=none] stop_reason=end_turn"
+  ],
+  "answer": "It's **64.4°F (18°C)** in Paris right now.",
+  "stats": {
+   "tool_calls": 2,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 0.67,
+   "seconds": 4.8
+  },
+  "note": "choice_final"
+ },
+ "three_cities": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'}) | get_weather({'city': 'Tokyo'}) | get_weather({'city': 'New York'})",
+   "[step 0]   -> 18 C | 25 C | 12 C",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18}) | celsius_to_fahrenheit({'celsius': 25}) | celsius_to_fahrenheit({'celsius': 12})",
+   "[step 1]   -> 64.4 F | 77.0 F | 53.6 F"
+  ],
+  "answer": "These are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **New York:** 53.6°F (12°C)\n\nTokyo is the warmest of the three, and New York is the coolest.",
+  "stats": {
+   "tool_calls": 6,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 2.0,
+   "seconds": 10.0
+  },
+  "note": "hook + parallel_live"
+ },
+ "three_cities_pool": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'}) | get_weather({'city': 'Tokyo'}) | get_weather({'city': 'New York'})",
+   "[step 0]   -> 18 C | 25 C | 12 C",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18}) | celsius_to_fahrenheit({'celsius': 25}) | celsius_to_fahrenheit({'celsius': 12})",
+   "[step 1]   -> 64.4 F | 77.0 F | 53.6 F"
+  ],
+  "answer": "Here are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **New York:** 53.6°F (12°C)\n\nTokyo is the warmest right now, and New York is the coolest.",
+  "stats": {
+   "tool_calls": 6,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 2.0,
+   "seconds": 8.8
+  },
+  "note": "parallel_code: thread pool"
+ },
+ "partial_failure": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'}) | get_weather({'city': 'Tokyo'}) | get_weather({'city': 'Atlantis'})",
+   "[step 0]   -> 18 C | 25 C | No data for Atlantis",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18}) | celsius_to_fahrenheit({'celsius': 25})",
+   "[step 1]   -> 64.4 F | 77.0 F"
+  ],
+  "answer": "Here are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **Atlantis:** The weather service has no data for Atlantis. It's a legendary city, not a real place.",
+  "stats": {
+   "tool_calls": 5,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 1.67,
+   "seconds": 7.7
+  },
+  "note": "parallel_partial"
+ },
+ "parallel_disabled": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'})",
+   "[step 0]   -> 18 C",
+   "[step 1] get_weather({'city': 'Tokyo'})",
+   "[step 1]   -> 25 C",
+   "[step 2] get_weather({'city': 'New York'})",
+   "[step 2]   -> 12 C",
+   "[step 3] celsius_to_fahrenheit({'celsius': 18})",
+   "[step 3]   -> 64.4 F",
+   "[step 4] celsius_to_fahrenheit({'celsius': 25})",
+   "[step 4]   -> 77.0 F",
+   "[step 5] celsius_to_fahrenheit({'celsius': 12})",
+   "[step 5]   -> 53.6 F"
+  ],
+  "answer": "Here are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **New York:** 53.6°F (12°C)\n\nTokyo is the warmest right now, and New York is the coolest. I made these lookups one by one when I could have run them all at once.",
+  "stats": {
+   "tool_calls": 6,
+   "assistant_messages": 7,
+   "calls_per_assistant_msg": 0.86,
+   "seconds": 18.1
+  },
+  "note": "parallel_dial"
+ },
+ "disable_top_level": {
+  "error": "TypeError: Messages.create() got an unexpected keyword argument 'disable_parallel_tool_use'",
+  "trace": " vidoes/level3b-movie/test/run_demos.py\", line 33, in attempt\n    fn()\n    ~~^^\n  File \"/Users/shahdevs/Desktop/PP/AI vidoes/level3b-movie/test/run_demos.py\", line 174, in disable_top_level\n    client.messages.create(model=MODEL, max_tokens=256, tools=TOOLS, disable_parallel_tool_use=True,\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                           messages=[{\"role\": \"user\", \"content\": Q3}])\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shahdevs/.cache/uv/archive-v0/0uGliNjyEgL3_ab1/lib/python3.14/site-packages/anthropic/_utils/_utils.py\", line 294, in wrapper\n    return func(*args, **kwargs)\nTypeError: Messages.create() got an unexpected keyword argument 'disable_parallel_tool_use'\n"
+ },
+ "nudged": {
+  "trace": [
+   "[step 0] get_weather({'city': 'Paris'}) | get_weather({'city': 'Tokyo'}) | get_weather({'city': 'New York'})",
+   "[step 0]   -> 18 C | 25 C | 12 C",
+   "[step 1] celsius_to_fahrenheit({'celsius': 18}) | celsius_to_fahrenheit({'celsius': 25}) | celsius_to_fahrenheit({'celsius': 12})",
+   "[step 1]   -> 64.4 F | 77.0 F | 53.6 F"
+  ],
+  "answer": "Here are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **New York:** 53.6°F (12°C)\n\nTokyo is the warmest right now. New York is the coolest, so you may want a jacket there.",
+  "stats": {
+   "tool_calls": 6,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 2.0,
+   "seconds": 12.6
+  },
+  "note": "parallel_dial: does the nudge change the metric?"
+ },
+ "book_nonstrict": {
+  "stop_reason": "tool_use",
+  "tool_uses": [
+   {
+    "name": "book_meeting",
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    }
+   }
+  ],
+  "arg_types": {
+   "room": "str",
+   "attendees": "int",
+   "date": "str"
+  },
+  "text": "",
+  "note": "strict_live: without strict"
+ },
+ "book_strict": {
+  "stop_reason": "tool_use",
+  "tool_uses": [
+   {
+    "name": "book_meeting",
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    }
+   }
+  ],
+  "arg_types": {
+   "room": "str",
+   "attendees": "int",
+   "date": "str"
+  },
+  "text": "",
+  "note": "strict_live: with strict"
+ },
+ "book_trials": {
+  "rows": [
+   {
+    "trial": 0,
+    "strict": false,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 0,
+    "strict": true,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 1,
+    "strict": false,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 1,
+    "strict": true,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 2,
+    "strict": false,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 2,
+    "strict": true,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 3,
+    "strict": false,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 3,
+    "strict": true,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 4,
+    "strict": false,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   },
+   {
+    "trial": 4,
+    "strict": true,
+    "input": {
+     "room": "Everest",
+     "attendees": 12,
+     "date": "2026-10-23"
+    },
+    "types": {
+     "room": "str",
+     "attendees": "int",
+     "date": "str"
+    }
+   }
+  ],
+  "note": "strict_live: look for any non-integer attendees / off-enum room without strict"
+ },
+ "runner_schema": {
+  "schema": {
+   "name": "get_weather_t",
+   "description": "Get the current temperature in Celsius for a city.",
+   "input_schema": {
+    "additionalProperties": false,
+    "properties": {
+     "city": {
+      "description": "The city name, e.g. Paris.",
+      "title": "City",
+      "type": "string"
+     }
+    },
+    "required": [
+     "city"
+    ],
+    "type": "object"
+   }
+  },
+  "attrs": [
+   "call",
+   "close",
+   "description",
+   "func",
+   "input_schema",
+   "name",
+   "to_dict"
+  ],
+  "note": "runner_live: how to print the generated tool dict"
+ },
+ "runner_tokyo": {
+  "final_text": "It's 25°C in Tokyo right now. I can only check the temperature, so I don't know about other conditions like rain or humidity.",
+  "seconds": 3.2,
+  "note": "runner_live: does the runner work on Bedrock?"
+ },
+ "runner_build": {
+  "trace": [
+   "[turn 1] get_weather_t({'city': 'Paris'}) | get_weather_t({'city': 'Tokyo'}) | get_weather_t({'city': 'New York'})",
+   "[turn 2] celsius_to_fahrenheit_t({'celsius': 18}) | celsius_to_fahrenheit_t({'celsius': 25}) | celsius_to_fahrenheit_t({'celsius': 12})",
+   "[turn 3] (text)"
+  ],
+  "answer": "Here are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **New York:** 53.6°F (12°C)\n\nTokyo is the warmest right now and New York is the coolest.",
+  "stats": {
+   "tool_calls": 6,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 2.0,
+   "seconds": 12.8
+  },
+  "note": "hook + build_run"
+ },
+ "runner_strict_type": {
+  "celsius_args": [
+   {
+    "celsius": 25,
+    "type": "int"
+   }
+  ],
+  "answer": "It's about **77°F** in Tokyo right now (25°C).",
+  "note": "build_run: is celsius a number, not a string?"
+ },
+ "auto_haiku": {
+  "stop_reason": "tool_use",
+  "content_types": [
+   "tool_use"
+  ],
+  "tool_uses": [
+   {
+    "name": "get_weather",
+    "input": {
+     "city": "Paris"
+    }
+   }
+  ],
+  "text_before": "",
+  "note": "choice_live: same on Haiku with auto, for the 'no text before' contrast"
+ },
+ "none_opus_instructed": {
+  "stop_reason": "end_turn",
+  "blocks": [],
+  "text": "",
+  "note": "choice_live: none with a system prompt"
+ },
+ "strict_decorator": {
+  "schema": {
+   "name": "celsius_to_fahrenheit_s",
+   "description": "Convert a temperature from Celsius to Fahrenheit.",
+   "input_schema": {
+    "additionalProperties": false,
+    "properties": {
+     "celsius": {
+      "description": "The temperature in Celsius.",
+      "title": "Celsius",
+      "type": "number"
+     }
+    },
+    "required": [
+     "celsius"
+    ],
+    "type": "object"
+   },
+   "strict": true
+  },
+  "note": "build_code: @beta_tool(strict=True) exists; what does to_dict() show?"
+ },
+ "runner_strict_build": {
+  "trace": [
+   "[turn 1] get_weather_s({'city': 'Paris'}) | get_weather_s({'city': 'Tokyo'}) | get_weather_s({'city': 'New York'})",
+   "[turn 2] celsius_to_fahrenheit_s({'celsius': 18}) | celsius_to_fahrenheit_s({'celsius': 25}) | celsius_to_fahrenheit_s({'celsius': 12})",
+   "[turn 3] (text)"
+  ],
+  "answer": "These are the current temperatures:\n\n- **Paris:** 64.4°F (18°C)\n- **Tokyo:** 77.0°F (25°C)\n- **New York:** 53.6°F (12°C)\n\nTokyo is the warmest and New York is the coolest.",
+  "stats": {
+   "tool_calls": 6,
+   "assistant_messages": 3,
+   "calls_per_assistant_msg": 2.0,
+   "seconds": 10.3
+  },
+  "note": "build_run with strict decorated tools"
+ },
+ "none_opus_no_tool_needed": {
+  "stop_reason": "end_turn",
+  "blocks": [
+   "text"
+  ],
+  "text": "A weather assistant gives you current conditions and forecasts for the places you ask about, and can do related tasks like converting temperatures between Celsius and Fahrenheit.",
+  "output_tokens": 56
+ },
+ "none_opus_asked_to_explain": {
+  "stop_reason": "end_turn",
+  "blocks": [],
+  "text": "",
+  "output_tokens": 1
+ },
+ "slow_serial": {
+  "trace": [
+   "[step 0] 3 calls, tools took 3.0s",
+   "[step 1] 3 calls, tools took 3.0s"
+  ],
+  "tool_seconds": 6.0,
+  "total_seconds": 18.5,
+  "note": "parallel_code: 1 s per tool, run one after another"
+ },
+ "slow_pool": {
+  "trace": [
+   "[step 0] 3 calls, tools took 1.0s",
+   "[step 1] 3 calls, tools took 1.0s"
+  ],
+  "tool_seconds": 2.0,
+  "total_seconds": 10.2,
+  "note": "parallel_code: 1 s per tool, ThreadPoolExecutor"
+ }
+}
