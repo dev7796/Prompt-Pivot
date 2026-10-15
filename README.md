@@ -8,8 +8,8 @@ by level. Each folder has its own README with the file-by-section table, setup, 
 | `level-1-novice/` | Talk to Claude: the Messages API, tokens, system prompts, the chatbot | published |
 | `level-2a-beginner/` | Make Claude Reliable: prompt engineering and structured outputs | published |
 | `level-2b-beginner/` | Documents, Images and Proof: PDFs, citations, the Files API | published |
-| `level-3a-intermediate/` | Give Claude Hands: tool use and the agent loop | in production |
-| `level-3b-intermediate/` | Steering the Tools: tool choice, parallel, strict, SDK runner | planned |
+| `level-3a-intermediate/` | Give Claude Hands: tool use and the agent loop | published |
+| `level-3b-intermediate/` | Steering the Tools: tool choice, parallel, strict, SDK runner | in production |
 | `level-3c-intermediate/` | Built-in Tools and a Research Assistant | planned |
 | `level-4a-advanced/` | Think Better: thinking and prompt caching | planned |
 | `level-4b-advanced/` | Memory and the Long Game: batches, memory, compaction | planned |
