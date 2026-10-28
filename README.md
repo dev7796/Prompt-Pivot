@@ -11,7 +11,7 @@ by level. Each folder has its own README with the file-by-section table, setup, 
 | `level-3a-intermediate/` | Give Claude Hands: tool use and the agent loop | published |
 | `level-3b-intermediate/` | Steering the Tools: tool choice, parallel, strict, SDK runner | published |
 | `level-3c-intermediate/` | Built-in Tools and a Research Assistant | in production |
-| `level-4a-advanced/` | Think Better: thinking and prompt caching | planned |
+| `level-4a-advanced/` | Think Better: thinking and prompt caching | in production |
 | `level-4b-advanced/` | Memory and the Long Game: batches, memory, compaction | planned |
 | `level-4c-advanced/` | Computer Use and MCP | planned |
 | `level-4d-advanced/` | Agent SDK, Skills and Claude Code | planned |
