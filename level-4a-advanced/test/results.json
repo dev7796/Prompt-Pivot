@@ -1,0 +1,383 @@
+{
+ "gcd_summarized": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking": "Running Euclid's algorithm on 1071 and 462, I work through the remainders step by step and land on a GCD of 21.\n\n",
+  "answer": "The GCD of 1071 and 462 is **21**.\n\nUsing the Euclidean algorithm:\n- 1071 = 2 × 462 + 147\n- 462 = 3 × 147 + 21\n- 147 = 7 × 21 + 0\n\nThe last nonzero remainder is 21.",
+  "usage": {
+   "input": 23,
+   "output": 140,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 3.4,
+  "note": "thinking_live beat 1"
+ },
+ "gcd_omitted": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking_field_len": 0,
+  "has_signature": true,
+  "answer": "The GCD of 1071 and 462 is **21**.\n\nUsing the Euclidean algorithm:\n- 1071 = 2 × 462 + 147\n- 462 = 3 × 147 + 21\n- 147 = 7 × 21 + 0\n\nThe last non-zero remainder is 21.",
+  "usage": {
+   "input": 23,
+   "output": 140,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 2.1,
+  "note": "thinking_live beat 2: compare output tokens to summarized"
+ },
+ "enabled_400": {
+  "error": "BadRequestError: Error code: 400 - {'message': '\"thinking.type.enabled\" is not supported for this model. Use \"thinking.type.adaptive\" and \"output_config.effort\" to control thinking behavior.'}",
+  "note": "thinking_live beat 3: expected 400 on Opus 5.5"
+ },
+ "disabled_400": {
+  "error": "BadRequestError: Error code: 400 - {'message': '\"thinking.type.disabled\" is not supported for this model. Use \"thinking.type.adaptive\" and \"output_config.effort\" to control thinking behavior.'}",
+  "note": "thinking_live beat 3"
+ },
+ "haiku_adaptive_400": {
+  "error": "BadRequestError: Error code: 400 - {'message': 'adaptive thinking is not supported on this model'}",
+  "note": "thinking_live beat 4: expected 400 on Haiku 4.5"
+ },
+ "haiku_enabled": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking": "I need to find the GCD (Greatest Common Divisor) of 1071 and 462.\n\nI'll use the Euclidean algorithm:\n\nGCD(1071, 462):\n1071 = 462 × 2 + 147\n462 = 147 × 3 + 21\n147 = 21 × 7 + 0\n\nSo GCD(1071, 462) = 21\n\nLet me verify:\n1071 ÷ 21 = 51\n462 ÷ 21 = 22\n\nSo 1071 = 21 × 51 and 462 = 21 × 22\n\nGCD(51, 22):\n51 = 22 × 2 + 7\n22 = 7 × 3 + 1\n7 = 1 × 7 + 0\n\nSo GCD(51, 22) = 1, which means 21 is indeed the GCD of 1071 and 462.",
+  "answer": "# GCD of 1071 and 462\n\nUsing the Euclidean algorithm:\n\n- 1071 = 462 × 2 + 147\n- 462 = 147 × 3 + 21\n- 147 = 21 × 7 + 0\n\n**The GCD is 21**",
+  "usage": {
+   "input": 50,
+   "output": 331,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 1.9,
+  "note": "thinking_live beat 4"
+ },
+ "effort_low": {
+  "answer": "The GCD of 1071 and 462 is **21**.\n\nUsing the Euclidean algorithm:\n- 1071 = 2 × 462 + 147\n- 462 = 3 × 147 + 21\n- 147 = 7 × 21 + 0\n\nThe last nonzero remainder is 21.",
+  "usage": {
+   "input": 23,
+   "output": 140,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 1.9,
+  "note": "effort beat 4"
+ },
+ "effort_high": {
+  "answer": "The GCD of 1071 and 462 is **21**.\n\nUsing the Euclidean algorithm:\n\n- 1071 = 2 × 462 + 147\n- 462 = 3 × 147 + 21\n- 147 = 7 × 21 + 0\n\nThe last non-zero remainder is 21.",
+  "usage": {
+   "input": 23,
+   "output": 140,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 2.1,
+  "note": "effort beat 4"
+ },
+ "preserve_400": {
+  "result": "ACCEPTED?!",
+  "step1_blocks": [
+   "tool_use"
+  ],
+  "answer": ""
+ },
+ "preserve_ok": {
+  "steps": 3,
+  "answer": "It's 64.4°F (18°C) in Paris right now.",
+  "note": "preserve beat 5"
+ },
+ "cache_short": {
+  "calls": [
+   {
+    "input": 513,
+    "output": 145,
+    "cache_write": 0,
+    "cache_read": 0
+   },
+   {
+    "input": 488,
+    "output": 89,
+    "cache_write": 0,
+    "cache_read": 0
+   }
+  ],
+  "prefix_tokens_approx": "count_tokens failed: AnthropicError",
+  "note": "cache_live beat 1: silent no-cache under 512"
+ },
+ "cache_handbook": {
+  "handbook_chars": 3858,
+  "calls": [
+   {
+    "q": "How many vacation days do new employees get?",
+    "usage": {
+     "input": 18,
+     "output": 268,
+     "cache_write": 1285,
+     "cache_read": 0
+    },
+    "seconds": 3.4,
+    "answer": "New employees get **15 days of paid vacation** in their first year. Section 7 (Paid time off) states:\n\n> \"New employees receive 15 days of paid vacation in their first year of employment, accruing at 1.25 days per month from the start date.\"\n\nBecause vacation accrues monthly, you build up the 15 day"
+   },
+   {
+    "q": "What is the equipment allowance?",
+    "usage": {
+     "input": 16,
+     "output": 395,
+     "cache_write": 0,
+     "cache_read": 1285
+    },
+    "seconds": 4.4,
+    "answer": "New employees receive a **one-time $500 allowance** in their first month to furnish a home workspace. From **Section 5 (Equipment and workspace)**:\n\n> \"In addition, each employee receives a one-time equipment allowance of $500 in their first month to furnish a home workspace, for items such as a des"
+   }
+  ],
+  "note": "cache_live beat 2: write then read"
+ },
+ "cache_loop": {
+  "steps": [
+   {
+    "input": 4,
+    "output": 145,
+    "cache_write": 1214,
+    "cache_read": 0
+   },
+   {
+    "input": 2,
+    "output": 168,
+    "cache_write": 240,
+    "cache_read": 1214
+   },
+   {
+    "input": 2,
+    "output": 62,
+    "cache_write": 291,
+    "cache_read": 1454
+   }
+  ],
+  "n_steps": 3,
+  "trace": [
+   "[step 0] get_weather({\"city\": \"Paris\"})",
+   "[step 0] get_weather({\"city\": \"Tokyo\"})",
+   "[step 0] get_weather({\"city\": \"New York\"})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 18})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 25})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 12})"
+  ],
+  "answer": "Paris: 64.4 degrees Fahrenheit\nTokyo: 77.0 degrees Fahrenheit\nNew York: 53.6 degrees Fahrenheit",
+  "seconds": 6.5,
+  "cost_usd": 0.01679,
+  "cost_if_uncached_usd": 0.02518,
+  "tokens_in_total": 4421,
+  "tokens_out_total": 375,
+  "note": "cache_live beats 3-4: moving breakpoint across the loop"
+ },
+ "cache_loop_uncached": {
+  "steps": [
+   {
+    "input": 1218,
+    "output": 145,
+    "cache_write": 0,
+    "cache_read": 0
+   },
+   {
+    "input": 1456,
+    "output": 168,
+    "cache_write": 0,
+    "cache_read": 0
+   },
+   {
+    "input": 1747,
+    "output": 62,
+    "cache_write": 0,
+    "cache_read": 0
+   }
+  ],
+  "n_steps": 3,
+  "trace": [
+   "[step 0] get_weather({\"city\": \"Paris\"})",
+   "[step 0] get_weather({\"city\": \"Tokyo\"})",
+   "[step 0] get_weather({\"city\": \"New York\"})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 18})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 25})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 12})"
+  ],
+  "answer": "Paris: 64.4 degrees Fahrenheit\nTokyo: 77.0 degrees Fahrenheit\nNew York: 53.6 degrees Fahrenheit",
+  "seconds": 5.3,
+  "cost_usd": 0.02518,
+  "cost_if_uncached_usd": 0.02518,
+  "tokens_in_total": 4421,
+  "tokens_out_total": 375,
+  "note": "cache_live beat 4: the control run, no cache_control"
+ },
+ "cache_timestamp": {
+  "timestamp_on_top": [
+   {
+    "input": 13,
+    "output": 236,
+    "cache_write": 1286,
+    "cache_read": 0
+   },
+   {
+    "input": 16,
+    "output": 266,
+    "cache_write": 1286,
+    "cache_read": 0
+   }
+  ],
+  "timestamp_below_clip": [
+   {
+    "input": 24,
+    "output": 199,
+    "cache_write": 1268,
+    "cache_read": 0
+   },
+   {
+    "input": 27,
+    "output": 233,
+    "cache_write": 0,
+    "cache_read": 1268
+   }
+  ],
+  "note": "cache_breaks beat 3"
+ },
+ "build": {
+  "steps": [
+   {
+    "input": 4,
+    "output": 145,
+    "cache_write": 0,
+    "cache_read": 1214
+   },
+   {
+    "input": 2,
+    "output": 168,
+    "cache_write": 0,
+    "cache_read": 1454
+   },
+   {
+    "input": 2,
+    "output": 62,
+    "cache_write": 0,
+    "cache_read": 1745
+   }
+  ],
+  "n_steps": 3,
+  "trace": [
+   "[step 0] get_weather({\"city\": \"Paris\"})",
+   "[step 0] get_weather({\"city\": \"Tokyo\"})",
+   "[step 0] get_weather({\"city\": \"New York\"})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 18})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 25})",
+   "[step 1] celsius_to_fahrenheit({\"celsius\": 12})"
+  ],
+  "answer": "Paris: 64.4 degrees Fahrenheit\nTokyo: 77.0 degrees Fahrenheit\nNew York: 53.6 degrees Fahrenheit",
+  "seconds": 5.2,
+  "cost_usd": 0.00841,
+  "cost_if_uncached_usd": 0.02518,
+  "tokens_in_total": 4421,
+  "tokens_out_total": 375,
+  "note": "build_run: summarized thinking + top-level cache_control, per-step receipts"
+ },
+ "hard_summarized": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking": "Trying ball=0.05, bat=1.05 doesn't satisfy the \"costs $1 more\" condition exactly, so I need to adjust: ball at 0.075 and bat at 0.945 gives a difference closer but still off, totaling 1.02 instead of 1.00.\n\n",
+  "answer": "1.02",
+  "usage": {
+   "input": 89,
+   "output": 46,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 3.4,
+  "note": "thinking_live / effort: a question that needs thinking (truth: ball 0.05 -> 0.075, bat 1.05 -> 0.945, total 1.02)"
+ },
+ "hard_omitted": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking": "",
+  "answer": "1.02",
+  "usage": {
+   "input": 89,
+   "output": 58,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 1.4,
+  "note": "thinking_live / effort: a question that needs thinking (truth: ball 0.05 -> 0.075, bat 1.05 -> 0.945, total 1.02)"
+ },
+ "hard_effort_low": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking": "",
+  "answer": "1.02",
+  "usage": {
+   "input": 89,
+   "output": 44,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 1.2,
+  "note": "thinking_live / effort: a question that needs thinking (truth: ball 0.05 -> 0.075, bat 1.05 -> 0.945, total 1.02)"
+ },
+ "hard_effort_high": {
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "thinking": "",
+  "answer": "1.02",
+  "usage": {
+   "input": 89,
+   "output": 55,
+   "cache_write": 0,
+   "cache_read": 0
+  },
+  "seconds": 1.2,
+  "note": "thinking_live / effort: a question that needs thinking (truth: ball 0.05 -> 0.075, bat 1.05 -> 0.945, total 1.02)"
+ },
+ "preserve2": {
+  "per_step_blocks": [
+   [
+    "tool_use",
+    "tool_use",
+    "tool_use"
+   ],
+   [
+    "thinking",
+    "text",
+    "tool_use"
+   ],
+   [
+    "text"
+   ]
+  ],
+  "thinking_summaries": [
+   "70°F converts to about 21.1°C, which is 3.1 degrees off from Paris's 18°C and 3.9 off from Tokyo's 25°C, so Paris is the closer match.\n\n"
+  ],
+  "tidy_attempt": {
+   "step": 1,
+   "result": "ACCEPTED?!",
+   "blocks_back": [
+    "thinking",
+    "text"
+   ]
+  },
+  "steps": 3,
+  "answer": "**Paris** is closest to 70°F right now. It's **64.4°F** there (18°C), about 5.6°F below 70°F.\n\nTokyo was a close second at 25°C, which is about 77°F, or 7°F above. New York is much colder at 12°C.",
+  "note": "preserve beat 5, second attempt"
+ }
+}
