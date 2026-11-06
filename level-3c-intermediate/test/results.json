@@ -1,0 +1,328 @@
+{
+ "backend_probe": {
+  "results": {
+   "web_search_20250305": "bedrock FAIL: BadRequestError: Error code: 400 - {'message': \"tool type 'web_search_20250305' is not supported for this model\"}",
+   "web_fetch_20250910": "bedrock FAIL: BadRequestError: Error code: 400 - {'message': \"tool type 'web_fetch_20250910' is not supported for this model\"}",
+   "code_execution_20250825": "bedrock FAIL: BadRequestError: Error code: 400 - {'message': \"tool type 'code_execution_20250825' is not supported for this model\"}"
+  },
+  "direct_available": true,
+  "note": "server_intro: which backend serves server tools"
+ },
+ "web_search": {
+  "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'messages.1.content.2: Invalid `signature` in `thinking` block. The block is bound to a different conversation. Remove the block, or set `thinking.block_binding.prefix_mismatch_behavior` to \"drop_block\". That setting requires the `thinking-binding-controls-2026-08-01` value in the `anthropic-beta` header. The `tools` list differs from the one this block was created with.'}, 'request_id': 'req_011CgRnr1LPCjbzTV6UnAbuc'}",
+  "trace": "00 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'messages.1.content.2: Invalid `signature` in `thinking` block. The block is bound to a different conversation. Remove the block, or set `thinking.block_binding.prefix_mismatch_behavior` to \"drop_block\". That setting requires the `thinking-binding-controls-2026-08-01` value in the `anthropic-beta` header. The `tools` list differs from the one this block was created with.'}, 'request_id': 'req_011CgRnr1LPCjbzTV6UnAbuc'}\n"
+ },
+ "web_fetch_with_url": {
+  "backend": "direct",
+  "stop_reason": "end_turn",
+  "blocks": [
+   "server_tool_use",
+   "web_fetch_tool_result",
+   "thinking",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "text": "That URL now redirects to platform.claude.com. Here's the page in three sentences:\n\nTool use (also called function calling) lets Claude call functions that you define or that Anthropic provides. The main difference between tools is where they run: client tools (including user-defined tools and tools with Anthropic-defined schemas, such as `bash` and `text_editor`) run in your application, while server tools (such as `web_search`, `web_fetch`, `code_execution`, and `tool_search`) run on Anthropic's infrastructure. By default, Claude determines on each turn whether to call a tool or respond directly, and you can steer this with your system prompt or the `tool_choice` setting. On cost, you pay for input tokens (including the `tools` parameter) and output tokens, plus additional usage-based pricing (for example, web search charges per search performed).",
+  "citations": [
+   "Tool use with Claude",
+   "Tool use with Claude",
+   "Tool use with Claude",
+   "Tool use with Claude",
+   "Tool use with Claude",
+   "Tool use with Claude"
+  ],
+  "seconds": 6.4,
+  "note": "fetch_live run 1"
+ },
+ "web_fetch_without_url": {
+  "backend": "direct",
+  "stop_reason": "end_turn",
+  "blocks": [
+   "thinking",
+   "server_tool_use",
+   "web_fetch_tool_result",
+   "text"
+  ],
+  "text": "I can't open the page. My fetch tool only works with URLs that you've pasted in or that came from earlier search results, so it blocked the docs address I tried (https://docs.anthropic.com/en/docs/build-with-claude/tool-use/overview). I also don't have a search tool to look up the link myself.\n\nIf you paste the page's URL in your next message, I'll fetch it and give you a three-sentence summary.",
+  "seconds": 5.6,
+  "note": "fetch_live run 2: URL not in conversation"
+ },
+ "search_then_fetch": {
+  "backend": "direct",
+  "stop_reason": "end_turn",
+  "blocks": [
+   "server_tool_use",
+   "web_fetch_tool_result",
+   "server_tool_use",
+   "web_search_tool_result",
+   "server_tool_use",
+   "web_fetch_tool_result",
+   "thinking",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "text": "The article is **\"Building effective agents\"** from Anthropic's Engineering team, written by Erik S. and Barry Zhang and published December 19, 2024 (https://www.anthropic.com/engineering/building-effective-agents). The page says \"Much of the tooling landscape described in this post has changed since December 2024.\"\n\n**The two types it names are workflows and agents.** The article doesn't actually use the phrase \"two core patterns.\" It says Anthropic groups all these variations as **agentic systems**, but draws \"an important architectural distinction between **workflows** and **agents**\":\n\n1. **Workflows:** \"systems where LLMs and tools are orchestrated through predefined code paths.\"\n2. **Agents:** \"systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.\"\n\nOn when to use each, workflows give predictability and consistency for well-defined tasks, while agents are better when flexibility and model-driven decision-making are needed at scale. The article also notes that for many applications, optimizing single LLM calls with retrieval and in-context examples is usually enough.\n\n**Other items the article lists, in ca",
+  "citations": [
+   "Building effective AI agents",
+   "Building effective AI agents",
+   "Building effective AI agents",
+   "Building effective AI agents",
+   "Building effective AI agents",
+   "Building effective AI agents"
+  ],
+  "seconds": 17.3,
+  "note": "fetch_live run 3: search -> fetch chain"
+ },
+ "stats_no_tools": {
+  "backend": "direct",
+  "text": "**Mean**\n\n(1 + 2 + … + 10) / 10 = 55 / 10 = **5.500**\n\n**Standard deviation**\n\nThe sum of squared deviations from the mean is\nΣ(xᵢ − 5.5)² = 2 × (0.5² + 1.5² + 2.5² + 3.5² + 4.5²) = 2 × 41.25 = 82.5\n\n| Type | Variance | Standard deviation |\n|---|---|---|\n| **Population** (divide by n = 10) | 82.5 / 10 = 8.250 | √8.25 ≈ **2.872** |\n| **Sample** (divide by n − 1 = 9) | 82.5 / 9 ≈ 9.167 | √9.167 ≈ **3.028** |\n\nThe integers 1 to 10 are the complete set, not a sample drawn from a larger group, so the **population standard deviation, 2.872**, is the appropriate one. If you treat them as a sample, use 3.028.",
+  "seconds": 4.5,
+  "note": "code_live beat 1 (truth: mean 5.5, pop sd 2.872, sample sd 3.028)"
+ },
+ "stats_code_exec": {
+  "backend": "direct",
+  "stop_reason": "end_turn",
+  "blocks": [
+   "thinking",
+   "text"
+  ],
+  "code": [],
+  "tool_results": "[]",
+  "text": "For the integers 1 through 10:\n\n- **Mean:** **5.500**\n- **Standard deviation:**\n  - **Population** (divide by n = 10): **2.872**\n  - **Sample** (divide by n − 1 = 9): **3.028**\n\n**How I got these:**\n- The values add up to 55, so the mean is 55 / 10 = 5.5.\n- The squared distances from the mean add up to 82.5.\n- Population variance is 82.5 / 10 = 8.25, so the SD is √8.25 ≈ 2.872.\n- Sample variance is 82.5 / 9 ≈ 9.167, so the SD is √9.167 ≈ 3.028.\n\nThe numbers 1 to 10 are the whole set here, not a sample from something bigger, so the **population SD (2.872)** is the right one to use. Use 3.028 only if these values are a sample from a larger group.",
+  "seconds": 4.4,
+  "container": null,
+  "note": "code_live beat 2"
+ },
+ "csv_chart": {
+  "error": "TypeError: Messages.create() got an unexpected keyword argument 'betas'",
+  "trace": "iles-api-2025-04-14\"])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shahdevs/Desktop/PP/AI vidoes/level3c-movie/test/run_demos.py\", line 108, in create\n    r = client.messages.create(model=MODEL, **kw)\n  File \"/Users/shahdevs/.cache/uv/archive-v0/0QpsCAg81ht58oWH/lib/python3.14/site-packages/anthropic/_utils/_utils.py\", line 294, in wrapper\n    return func(*args, **kwargs)\nTypeError: Messages.create() got an unexpected keyword argument 'betas'\n"
+ },
+ "design_eval": {
+  "backend": "direct",
+  "rows": [
+   {
+    "q": "Is it raining in Lyon right now?",
+    "set": "before",
+    "tool_uses": [
+     {
+      "name": "get_current_weather",
+      "input": {
+       "q": "Lyon"
+      }
+     }
+    ],
+    "output_tokens": 53,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Is it raining in Lyon right now?",
+    "set": "after",
+    "tool_uses": [
+     {
+      "name": "weather",
+      "input": {
+       "location": "Lyon, France",
+       "mode": "current"
+      }
+     }
+    ],
+    "output_tokens": 73,
+    "stop": "tool_use"
+   },
+   {
+    "q": "What's the weather at 48.85, 2.35?",
+    "set": "before",
+    "tool_uses": [
+     {
+      "name": "get_weather_by_coordinates",
+      "input": {
+       "lat": 48.85,
+       "lon": 2.35
+      }
+     }
+    ],
+    "output_tokens": 82,
+    "stop": "tool_use"
+   },
+   {
+    "q": "What's the weather at 48.85, 2.35?",
+    "set": "after",
+    "tool_uses": [
+     {
+      "name": "weather",
+      "input": {
+       "location": "48.85,2.35",
+       "mode": "current"
+      }
+     }
+    ],
+    "output_tokens": 74,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Will I need a coat in Austin this weekend?",
+    "set": "before",
+    "tool_uses": [
+     {
+      "name": "get_forecast",
+      "input": {
+       "q": "Austin, TX",
+       "days": 7
+      }
+     }
+    ],
+    "output_tokens": 75,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Will I need a coat in Austin this weekend?",
+    "set": "after",
+    "tool_uses": [
+     {
+      "name": "weather",
+      "input": {
+       "location": "Austin, United States",
+       "mode": "forecast"
+      }
+     }
+    ],
+    "output_tokens": 75,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Give me everything you can about current conditions in Tokyo.",
+    "set": "before",
+    "tool_uses": [
+     {
+      "name": "get_current_weather",
+      "input": {
+       "q": "Tokyo"
+      }
+     },
+     {
+      "name": "get_forecast",
+      "input": {
+       "q": "Tokyo",
+       "days": 3
+      }
+     }
+    ],
+    "output_tokens": 125,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Give me everything you can about current conditions in Tokyo.",
+    "set": "after",
+    "tool_uses": [
+     {
+      "name": "weather",
+      "input": {
+       "location": "Tokyo, Japan",
+       "mode": "current",
+       "detail": "full"
+      }
+     }
+    ],
+    "output_tokens": 98,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Weather in Paris?",
+    "set": "before",
+    "tool_uses": [
+     {
+      "name": "get_current_weather",
+      "input": {
+       "q": "Paris"
+      }
+     }
+    ],
+    "output_tokens": 52,
+    "stop": "tool_use"
+   },
+   {
+    "q": "Weather in Paris?",
+    "set": "after",
+    "tool_uses": [
+     {
+      "name": "weather",
+      "input": {
+       "location": "Paris, France",
+       "mode": "current"
+      }
+     }
+    ],
+    "output_tokens": 97,
+    "stop": "tool_use"
+   }
+  ],
+  "note": "design_example: compare tool picks and output tokens"
+ },
+ "research": {
+  "backend": "direct",
+  "trace": [
+   "[step 0] SEARCH {\"query\": \"Model Context Protocol\"}",
+   "[step 0] SEARCH {\"query\": \"Model Context Protocol adoption OpenAI Google Microsoft 2026\"}",
+   "[step 0] SEARCH {\"query\": \"Agentic AI Foundation Linux Foundation MCP announcement\"}",
+   "[step 0] save_note('MCP definition and purpose')",
+   "[step 0] save_note('MCP origin: Anthropic, November 2024')",
+   "[step 0] save_note('MCP governance: Linux Foundation AAIF')",
+   "[step 0] save_note('Major vendors supporting MCP')",
+   "[step 0] save_note('MCP adoption stats and 2026 spec')"
+  ],
+  "answer": "I saved five notes to your research file, each with source links: what MCP is, where it came from, who runs it, which companies support it, and how widely it's used.\n\n**What it is**\nMCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems. Using MCP, AI applications like Claude or ChatGPT can connect to data sources (e.g. local files, databases), tools (e.g. search engines, calculators) and workflows (e.g. specialized prompts)—enabling them to access key information and perform tasks. The setup is simple: developers can either expose their data through MCP servers or build AI applications (MCP clients) that connect to these servers. The main benefit is that each client and each MCP server implements the protocol just once, reducing total integrations from N×M to N+M.\n\n**Where it came from and who runs it**\nIt was introduced by Anthropic in November 2024. Anthropic later donated MCP to the Agentic AI Foundation, a directed fund under the Linux Foundation. That foundation was co-founded by Anthropic, Block and OpenAI, with support from Google, Microsoft, AWS, Cloudflare and Bloomberg. The people making decisions about the protocol are still the maintainers who have been stewarding it.\n\n**Who supports it**\n- **OpenAI:** In March 2025, OpenAI adopted MCP across the Agents SDK, Responses API, and ChatGPT desktop. In September 2025, it added MCP support to ChatGPT apps.\n- **Microsoft:** It was the first big company to add it. MCP su",
+  "stats": {
+   "tokens_in": 73180,
+   "tokens_out": 3629,
+   "per_step_in": [
+    45661,
+    27519
+   ],
+   "pauses": 0,
+   "steps": 2,
+   "seconds": 34.6
+  },
+  "notes_count": 5,
+  "notes_titles": [
+   "MCP definition and purpose",
+   "MCP origin: Anthropic, November 2024",
+   "MCP governance: Linux Foundation AAIF",
+   "Major vendors supporting MCP",
+   "MCP adoption stats and 2026 spec"
+  ],
+  "notes_with_url": 5,
+  "notes_preview": "## MCP definition and purpose\n\nMCP (Model Context Protocol) is an open-source standard for connecting AI applications (e.g., Claude, ChatGPT) to external systems: data sources (local files, databases), tools (search engines, calculators) and workflows (specialized prompts). Official docs compare it to a \"USB-C port for AI applications.\"\nArchitecture: developers either expose data through MCP servers or build AI applications (MCP clients) that connect to those servers.\nProblem solved: the \"N×M integration problem\" — each client and server implements the protocol once, so integrations go from N×M to N+M.\nSources:\n- https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro\n- https://www.anthropic.com/news/model-context-protocol\n- https://www.databricks.com/blog/what-is-model-context-protocol\n\n## MCP origin: Anthropic, November 2024\n\nAnthropic introduced and open-sourced MCP on November 25, 2024. The launch included the spec and SDKs, local MCP server support in Claude Desktop, and an open-source repository of servers (Google Drive, Slack, GitHub, Git, Postgres, Puppeteer). It is MIT-licensed. SDKs exist for TypeScript, Python, Java, Kotlin, C#, Go, PHP, Ruby, Rust, Swift and others.\nSources:\n- https://www.anthropic.com/news/model-context-protocol\n- https://en.wikipedia.org/wiki/Model_Context_Protocol\n- https://tech-insider.org/ie/model-context-protocol-mcp-update-2026/\n\n## MCP governance: Linux Foundation AAIF\n\nOn Dec 9, 2025, Anthropic donated MCP to the Agentic AI ",
+  "note": "hook + build_run + build_trace"
+ }
+}
